@@ -1,0 +1,61 @@
+LOCUS       pOpen_v5                1630 bp    DNA     circular  03-JAN-2022
+FEATURES             Location/Qualifiers
+     promoter        41..150
+                     /label="KanR Promoter"
+                     /locus_tag="KanR Promoter"
+     CDS             151..966
+                     /label="KanR"
+                     /codon_start="1"
+                     /gene="aph(3')-Ia"
+                     /product="aminoglycoside phosphotransferase"
+                     /note="confers resistance to kanamycin in bacteria or G418(Geneticin(R)) in eukaryotes"
+                     /translation="MSHIQRETSCSRPRLNSNMDADLYGYKWARDNVGQSGATIYRLYGKPDAPELFLKHGKGSVANDVTDEMVRLNWLTEFMPLPTIKHFIRTPDDAWLLTTAIPGKTAFQVLEEYPDSGENIVDALAVFLRRLHSIPVCNCPFNSDRVFRLAQAQSRMNNGLVDASDFDDERNGWPVEQVWKEMHKLLPFSPDSVVTHGDFSLDNLIFDEGKLIGCIDVGRVGIADRYQDLAILWNCLGEFSPSLQKRLFQKYGIDNPDMNKLQFHLMLDEFF"
+                     /locus_tag="KanR"
+     rep_origin      967..1586
+                     /label="ori"
+                     /direction="left"
+                     /locus_tag="Ori*"
+     misc_feature    1260..1260
+                     /label="MUT"
+                     /note="C to T to kill MlyI"
+                     /locus_tag="MUT"
+     misc_feature    18..29
+                     /label="BbsI"
+     misc_feature    1598..1609
+                     /label="BbsI"
+     primer_bind     1..17
+                     /label="M13 fwd"
+                     /note="common sequencing primer, one of multiple similar variants"
+     primer_bind     complement(1610..1630)
+                     /label="M13 rev"
+                     /note="common sequencing primer, one of multiple similar variants"
+ORIGIN      
+        1 gtaaaacgac ggccagtgaa gaccacgctG GTCTCaATAG aaagccacgt tgtgtctcaa
+       61 aatctctgat gttacattgc acaagataaa aatatatcat catgaacaat aaaactgtct
+      121 gcttacataa acagtaatac aaggggtgtt atgagccata ttcaacggga aacgtcttgc
+      181 tcgaggccgc gattaaattc caacatggat gctgatttat atgggtataa atgggctcgc
+      241 gataatgtcg ggcaatcagg tgcgacaatc tatcgattgt atgggaagcc cgatgcgcca
+      301 gagttgtttc tgaaacatgg caaaggtagc gttgccaatg atgttacaga tgagatggtc
+      361 agactaaact ggctgacgga atttatgcct cttccgacca tcaagcattt tatccgtact
+      421 cctgatgatg catggttact caccactgcg atccccggca aaacagcatt ccaggtatta
+      481 gaagaatatc ctgattcagg tgaaaatatt gttgatgcgc tggcagtgtt cctgcgccgg
+      541 ttgcattcga ttcctgtttg taattgtcct tttaacagcg atcgcgtatt tcgtctggct
+      601 caggcgcaat cacgaatgaa taacggtttg gttgatgcga gtgattttga tgacgagcgt
+      661 aatggctggc ctgttgaaca agtctggaaa gaaatgcata agctgttgcc attctcaccg
+      721 gattcagtcg tcactcatgg tgatttctca cttgataacc ttatttttga cgaggggaaa
+      781 ttaataggtt gtattgatgt tggacgagtg ggaatcgcag accgatacca ggatcttgcc
+      841 atcctatgga actgcctcgg tgagttttct ccttcattac agaaacggct ttttcaaaaa
+      901 tatggtattg ataatcctga tatgaataaa ttgcagtttc atttgatgct cgatgagttt
+      961 ttctaaagat caaaggatct tcttgagatc ctttttttct gcgcgtaatc tgctgcttgc
+     1021 aaacaaaaaa accaccgcta ccagcggtgg tttgtttgcc ggatcaagag ctaccaactc
+     1081 tttttccgaa ggtaactggc ttcagcagag cgcagatacc aaatactgtt cttctagtgt
+     1141 agccgtagtt aggccaccac ttcaagaact ctgtagcacc gcctacatac ctcgctctgc
+     1201 taatcctgtt accagtggct gctgccagtg gcgataagtc gtgtcttacc gggttggacc
+     1261 caagacgata gttaccggat aaggcgcagc ggtcgggctg aacggggggt tcgtgcacac
+     1321 agcccagctt ggagcgaacg acctacaccg aactgagata cctacagcgt gagctatgag
+     1381 aaagcgccac gcttcccgaa gggagaaagg cggacaggta tccggtaagc ggcagggtcg
+     1441 gaacaggaga gcgcacgagg gagcttccag ggggaaacgc ctggtatctt tatagtcctg
+     1501 tcgggtttcg ccacctctga cttgagcgtc gatttttgtg atgctcgtca ggggggcgga
+     1561 gcctatggaa aaacgccagc aacgcgAAAA tGAGACCgga gtagtcttcc atggtcatag
+     1621 ctgtttcctg     
+//
