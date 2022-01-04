@@ -39,6 +39,8 @@ The two methylated linker sequences will be synthesized as Ultramer duplexes fro
 ### Lowering costs
 To save $504, we could instead PCR the control inserts and vector backbone. This shouldn't theoretically be too hard, and may be worthwhile to save money. Assuming our time is worth $100 per day, it shouldn't take >5 days to optimize a PCR. However, this does increase the risk that something goes wrong.
 
+We could also forgo synthesis of the control linkers, since the methylation site won't be in the ligation overlap anyway.
+
 However, I believe we should synthesize our own copy. There are a couple reasons for this:
 1. Absolute de-risk. Any PCR or handling means possible setbacks.
 2. Known provenance.
@@ -46,21 +48,42 @@ However, I believe we should synthesize our own copy. There are a couple reasons
 ## Sequence
 The linkers are designed as such:
 ```
-GGTCTC N
-CCGAGA NNNNN
+# Methylation site definitions
+B1:
+G GTCTC
+CmCAGAG
+B2: 
+GG TCTC
+CCmAGAG
+T1:
+GGTCmTC
+CCAG AG
+T2:
+GGTCTCm
+CCAGAG
 
-# Forward 
-...GGTCmTC
-...CC
-# Reverse
-TGAGmACC...
-     TGG...
+# Forward (B1)
+...G GTCTC
+...CmC
+# Reverse (B1)
+    ACCm...
+ACTCTGG ...
 
-Overhangs set: TCmTC,TGAGm
+GGTCTC
+
+Overhangs set: TCTC,TGAG
 Efficiency: 100% (https://goldengate.neb.com/)
 
-Methylation side: https://doi.org/10.1021/sb500356d
+Methylation site paper: https://doi.org/10.1021/sb500356d
+Methylation site efficiency - figure S2: https://pubs.acs.org/doi/suppl/10.1021/sb500356d/suppl_file/sb500356d_si_002.pdf
 ```
 
+The B1 methylation site (the first C on the bottom strand) is actually at the least efficient out of the entire set of `[B1,B2,T1,T2]`. However, this is the only position that can be made on the linker yet and have no interaction with T4 ligase. 
+
+The denatured PAGE run shows that there is a small amount of cutting when methylated at this site. However, we can assume that rate is at some constant, which can be countered by the ligation having a higher constant rate. For example, the Yeast Toolkit has shown that a GoldenGate reaction with one set of internal BsaI sites will still return colonies, so it is likely that this will be good enough.
+
+# Results
+After this experiment is run, we should be able to tell if we can clone level 0 GoldenGate parts using methylated BsaI.
+
 ### Risks
-Unfortunately, we have no idea how the ligase will interact with the methylated overhangs. If the methylation prevents ligation, we will be very sad :(. But forunately, we should be able to see if methylation affecting ligation is the case.
+The methylation on B1 may still have a werid interaction with the ligase that prevents ligation. The rate of BsaI cutting may also still be too high for efficient ligation and building of the DNA. 
