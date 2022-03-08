@@ -1,0 +1,98 @@
+{
+  "prefs": {
+    "minOverlapLength": 20,
+    "minOverlapTm": 48,
+    "disallowLinearAssemblies": true,
+    "minFragLength": 50,
+    "pcrPol": {
+      "name": "Q5 High-Fidelity DNA Polymerase",
+      "id": "q5-0",
+      "buffer": "q5",
+      "group": "Q5"
+    },
+    "polGroup": "Q5",
+    "primerMinLen": 18,
+    "primerMinTm": 55,
+    "primerMaxTm": 70,
+    "primerCt": 500,
+    "primerMethod": 4,
+    "kit": {
+      "cat": "E1601",
+      "name": "NEB® Golden Gate Assembly Kit (BsaI-HF®v2)"
+    },
+    "ggenz": {
+      "name": "BsaI-HFv2",
+      "cat": "R3733",
+      "label": "<span class=\"orange\">BsaI-HFv2</span>",
+      "description": " (GGTCTCn^nnnn_)",
+      "re": {
+        "c1": 7,
+        "c2": 11,
+        "c3": 0,
+        "c4": 0,
+        "olen": -4,
+        "oseq": "NNNN",
+        "otype": "5-Prime",
+        "pat": "GGTCTC",
+        "regexp_c": "GAGACC",
+        "regexp_w": "GGTCTC"
+      }
+    },
+    "ligationConditions": {
+      "id": "T4_18h_25C",
+      "name": "T4 DNA Ligase, 25C, 18h incubation"
+    }
+  },
+  "fragments": [
+    {
+      "seq": "gtaaaacgacggccagtgaagaccacgctggtctcaatagaaagccacgttgtgtctcaaaatctctgatgttacattgcacaagataaaaatatatcatcatgaacaataaaactgtctgcttacataaacagtaatacaaggggtgttatgagccatattcaacgggaaacgtcttgctcgaggccgcgattaaattccaacatggatgctgatttatatgggtataaatgggctcgcgataatgtcgggcaatcaggtgcgacaatctatcgattgtatgggaagcccgatgcgccagagttgtttctgaaacatggcaaaggtagcgttgccaatgatgttacagatgagatggtcagactaaactggctgacggaatttatgcctcttccgaccatcaagcattttatccgtactcctgatgatgcatggttactcaccactgcgatccccggcaaaacagcattccaggtattagaagaatatcctgattcaggtgaaaatattgttgatgcgctggcagtgttcctgcgccggttgcattcgattcctgtttgtaattgtccttttaacagcgatcgcgtatttcgtctggctcaggcgcaatcacgaatgaataacggtttggttgatgcgagtgattttgatgacgagcgtaatggctggcctgttgaacaagtctggaaagaaatgcataagctgttgccattctcaccggattcagtcgtcactcatggtgatttctcacttgataaccttatttttgacgaggggaaattaataggttgtattgatgttggacgagtgggaatcgcagaccgataccaggatcttgccatcctatggaactgcctcggtgagttttctccttcattacagaaacggctttttcaaaaatatggtattgataatcctgatatgaataaattgcagtttcatttgatgctcgatgagtttttctaaagatcaaaggatcttcttgagatcctttttttctgcgcgtaatctgctgcttgcaaacaaaaaaaccaccgctaccagcggtggtttgtttgccggatcaagagctaccaactctttttccgaaggtaactggcttcagcagagcgcagataccaaatactgttcttctagtgtagccgtagttaggccaccacttcaagaactctgtagcaccgcctacatacctcgctctgctaatcctgttaccagtggctgctgccagtggcgataagtcgtgtcttaccgggttggacccaagacgatagttaccggataaggcgcagcggtcgggctgaacggggggttcgtgcacacagcccagcttggagcgaacgacctacaccgaactgagatacctacagcgtgagctatgagaaagcgccacgcttcccgaagggagaaaggcggacaggtatccggtaagcggcagggtcggaacaggagagcgcacgagggagcttccagggggaaacgcctggtatctttatagtcctgtcgggtttcgccacctctgacttgagcgtcgatttttgtgatgctcgtcaggggggcggagcctatggaaaaacgccagcaacgcgaaaatgagaccggagtagtcttccatggtcatagctgtttcctg",
+      "name": "pOpen_v5",
+      "topology": "circular",
+      "isVectorBackbone": true,
+      "type": "redig",
+      "subseq": [
+        37,
+        1586
+      ],
+      "leftREName": "BsaI-HFv2",
+      "rightREName": "BsaI-HFv2",
+      "leftREAdjustment": "none",
+      "rightREAdjustment": "none",
+      "digestIndex": 0
+    },
+    {
+      "seq": "gtaaaacgacggccagtggtctcaaaaataatgaacggagcaacctcactatacgacgaagtcatcatcatcaacaaaatcccgccgaaaaaaatcgacaccaaaggagtcgcaaccgaagaagtcgcaaccaaaaaagtcctactaaacaaactactaaccacccagctactaaacgaaccggaatgaagagcttatagtgagacccatggtcatagctgtttcctg",
+      "name": "recursive_bsai_ctrl_frag",
+      "topology": "linear",
+      "isVectorBackbone": false,
+      "type": "redig",
+      "subseq": [
+        25,
+        196
+      ],
+      "leftREName": "BsaI-HFv2",
+      "rightREName": "BsaI-HFv2",
+      "leftREAdjustment": "none",
+      "rightREAdjustment": "none",
+      "digestIndex": 0
+    }
+  ],
+  "junctions": [
+    {
+      "ggOverhang": "????",
+      "upstreamFrag": 1,
+      "downstreamFrag": 2
+    },
+    {
+      "ggOverhang": "ATAG",
+      "overlapBoundary": -4,
+      "upstreamFrag": 2,
+      "downstreamFrag": 1
+    }
+  ],
+  "version": "2.4.0",
+  "name": "Assembly_20220105",
+  "saved": "2022-01-05T17:48:56.404Z",
+  "created": "2022-01-05T17:46:53.966Z",
+  "valid": "de56e0ba914aa9663450afa11ab5d25fdcb6668d6901e403796600b10a648f8b"
+}

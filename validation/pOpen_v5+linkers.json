@@ -1,0 +1,142 @@
+{
+  "prefs": {
+    "minOverlapLength": 20,
+    "minOverlapTm": 48,
+    "disallowLinearAssemblies": true,
+    "minFragLength": 50,
+    "pcrPol": {
+      "name": "Q5 High-Fidelity DNA Polymerase",
+      "id": "q5-0",
+      "buffer": "q5",
+      "group": "Q5"
+    },
+    "polGroup": "Q5",
+    "primerMinLen": 18,
+    "primerMinTm": 55,
+    "primerMaxTm": 70,
+    "primerCt": 500,
+    "primerMethod": 4,
+    "kit": {
+      "cat": "E1601",
+      "name": "NEB® Golden Gate Assembly Kit (BsaI-HF®v2)"
+    },
+    "ggenz": {
+      "name": "BsaI-HFv2",
+      "cat": "R3733",
+      "label": "<span class=\"orange\">BsaI-HFv2</span>",
+      "description": " (GGTCTCn^nnnn_)",
+      "re": {
+        "c1": 7,
+        "c2": 11,
+        "c3": 0,
+        "c4": 0,
+        "olen": -4,
+        "oseq": "NNNN",
+        "otype": "5-Prime",
+        "pat": "GGTCTC",
+        "regexp_c": "GAGACC",
+        "regexp_w": "GGTCTC"
+      }
+    },
+    "ligationConditions": {
+      "id": "T4_18h_25C",
+      "name": "T4 DNA Ligase, 25C, 18h incubation"
+    }
+  },
+  "fragments": [
+    {
+      "seq": "gtaaaacgacggccagtgaagaccacgctggtctcaatagaaagccacgttgtgtctcaaaatctctgatgttacattgcacaagataaaaatatatcatcatgaacaataaaactgtctgcttacataaacagtaatacaaggggtgttatgagccatattcaacgggaaacgtcttgctcgaggccgcgattaaattccaacatggatgctgatttatatgggtataaatgggctcgcgataatgtcgggcaatcaggtgcgacaatctatcgattgtatgggaagcccgatgcgccagagttgtttctgaaacatggcaaaggtagcgttgccaatgatgttacagatgagatggtcagactaaactggctgacggaatttatgcctcttccgaccatcaagcattttatccgtactcctgatgatgcatggttactcaccactgcgatccccggcaaaacagcattccaggtattagaagaatatcctgattcaggtgaaaatattgttgatgcgctggcagtgttcctgcgccggttgcattcgattcctgtttgtaattgtccttttaacagcgatcgcgtatttcgtctggctcaggcgcaatcacgaatgaataacggtttggttgatgcgagtgattttgatgacgagcgtaatggctggcctgttgaacaagtctggaaagaaatgcataagctgttgccattctcaccggattcagtcgtcactcatggtgatttctcacttgataaccttatttttgacgaggggaaattaataggttgtattgatgttggacgagtgggaatcgcagaccgataccaggatcttgccatcctatggaactgcctcggtgagttttctccttcattacagaaacggctttttcaaaaatatggtattgataatcctgatatgaataaattgcagtttcatttgatgctcgatgagtttttctaaagatcaaaggatcttcttgagatcctttttttctgcgcgtaatctgctgcttgcaaacaaaaaaaccaccgctaccagcggtggtttgtttgccggatcaagagctaccaactctttttccgaaggtaactggcttcagcagagcgcagataccaaatactgttcttctagtgtagccgtagttaggccaccacttcaagaactctgtagcaccgcctacatacctcgctctgctaatcctgttaccagtggctgctgccagtggcgataagtcgtgtcttaccgggttggacccaagacgatagttaccggataaggcgcagcggtcgggctgaacggggggttcgtgcacacagcccagcttggagcgaacgacctacaccgaactgagatacctacagcgtgagctatgagaaagcgccacgcttcccgaagggagaaaggcggacaggtatccggtaagcggcagggtcggaacaggagagcgcacgagggagcttccagggggaaacgcctggtatctttatagtcctgtcgggtttcgccacctctgacttgagcgtcgatttttgtgatgctcgtcaggggggcggagcctatggaaaaacgccagcaacgcgaaaatgagaccggagtagtcttccatggtcatagctgtttcctg",
+      "name": "pOpen_v5",
+      "topology": "circular",
+      "isVectorBackbone": true,
+      "type": "redig",
+      "subseq": [
+        37,
+        1586
+      ],
+      "leftREName": "BsaI-HFv2",
+      "rightREName": "BsaI-HFv2",
+      "leftREAdjustment": "none",
+      "rightREAdjustment": "none",
+      "digestIndex": 0
+    },
+    {
+      "seq": "ggtctctaaaatagggataacagggtaatcctgtctctgagaccatatatata",
+      "name": "ctrl_linker_forward_1",
+      "topology": "linear",
+      "isVectorBackbone": false,
+      "type": "redig",
+      "subseq": [
+        8,
+        33
+      ],
+      "leftREName": "BsaI-HFv2",
+      "rightREName": "BsaI-HFv2",
+      "leftREAdjustment": "none",
+      "rightREAdjustment": "none",
+      "digestIndex": 0
+    },
+    {
+      "seq": "gtaaaacgacggccagtggtctcatctctaatgaacggagcaacctcactatacgacgaagtcatcatcatcaacaaaatcccgccgaaaaaaatcgacaccaaaggagtcgcaaccgaagaagtcgcaaccaaaaaagtcctactaaacaaactactaaccacccagctactaaacgaaccggaatgaagagctttgagtgagacccatggtcatagctgtttcctg",
+      "name": "recursive_bsai_fragment",
+      "topology": "linear",
+      "isVectorBackbone": false,
+      "type": "redig",
+      "subseq": [
+        25,
+        196
+      ],
+      "leftREName": "BsaI-HFv2",
+      "rightREName": "BsaI-HFv2",
+      "leftREAdjustment": "none",
+      "rightREAdjustment": "none",
+      "digestIndex": 0
+    },
+    {
+      "seq": "ggtctcttgagacagggctagttattgctcagcggatagtgagaccatatatatatata",
+      "name": "ctrl_linker_reverse_2",
+      "topology": "linear",
+      "isVectorBackbone": false,
+      "type": "redig",
+      "subseq": [
+        8,
+        35
+      ],
+      "leftREName": "BsaI-HFv2",
+      "rightREName": "BsaI-HFv2",
+      "leftREAdjustment": "none",
+      "rightREAdjustment": "none",
+      "digestIndex": 0
+    }
+  ],
+  "junctions": [
+    {
+      "ggOverhang": "????",
+      "upstreamFrag": 1,
+      "downstreamFrag": 2
+    },
+    {
+      "ggOverhang": "TCTC",
+      "overlapBoundary": -4,
+      "upstreamFrag": 2,
+      "downstreamFrag": 3
+    },
+    {
+      "ggOverhang": "TGAG",
+      "overlapBoundary": -4,
+      "upstreamFrag": 3,
+      "downstreamFrag": 4
+    },
+    {
+      "ggOverhang": "ATAG",
+      "overlapBoundary": -4,
+      "upstreamFrag": 4,
+      "downstreamFrag": 1
+    }
+  ],
+  "version": "2.4.0",
+  "name": "Assembly_20220105",
+  "saved": "2022-01-05T17:53:26.875Z",
+  "created": "2022-01-05T17:46:53.966Z",
+  "valid": "bf730f492532a4613d36b5a9eb83661ba1a2dc57be63f085f855a7da608938e5"
+}
