@@ -26,25 +26,25 @@ def run(protocol):
 
     # Resuspension
     # Dilute pIDM
-    p300s.transfer(45, pIDMv5K, water)
-    p20s.transfer(5, pIDMv5K, pIDMv5K_mm, mix_after=(4, 20))
+    p300s.transfer(45, water, pIDMv5K)
+    p20s.transfer(5, pIDMv5K_mm, pIDMv5K, mix_after=(4, 20))
 
     # Make 100uM stock solutions of linkers
-    p300s.transfer(535, linker_1, water, new_tip="always", mix_after=(15,200))
-    p300s.transfer(642, linker_2, water, new_tip="always", mix_after=(15,200))
-    p300s.transfer(680, ctrl_linker_1, water, new_tip="always", mix_after=(15,200))
-    p300s.transfer(593, ctrl_linker_2, water, new_tip="always", mix_after=(15,200))
+    p300s.transfer(535, water, linker_1, new_tip="always", mix_after=(15,200))
+    p300s.transfer(642, water, linker_2, new_tip="always", mix_after=(15,200))
+    p300s.transfer(680, water, ctrl_linker_1, new_tip="always", mix_after=(15,200))
+    p300s.transfer(593, water, ctrl_linker_2, new_tip="always", mix_after=(15,200))
 
     # Make linker solutions
     p300s.transfer(198, [tmp.wells_by_name()[w] for w in ["H12","G12"]], water)
     linker = tmp.wells_by_name()["H12"]
     ctrl_linker = tmp.wells_by_name()["G12"]
-    p20s.transfer(1, linker, [linker_1, linker_2], new_tip="always", mix_after=(3,20))
-    p20s.transfer(1, ctrl_linker, [ctrl_linker_1,ctrl_linker_2], new_tip="always", mix_after=(3,20))
+    p20s.transfer(1, [linker_1, linker_2], linker, new_tip="always", mix_after=(3,20))
+    p20s.transfer(1, [ctrl_linker_1,ctrl_linker_2], ctrl_linker, new_tip="always", mix_after=(3,20))
 
     # Make 5ng/uL stocks of fragments
-    p300s.transfer(50, fragment, water, new_tip="always", mix_after=(5,20))
-    p300s.transfer(50, ctrl_fragment, water, new_tip="always", mix_after=(5,20))
+    p300s.transfer(50, water, fragment, new_tip="always", mix_after=(5,20))
+    p300s.transfer(50, water, ctrl_fragment, new_tip="always", mix_after=(5,20))
 
     # Build
     # There are 4 plasmids getting built:
