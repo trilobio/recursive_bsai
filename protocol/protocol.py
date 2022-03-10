@@ -21,7 +21,7 @@ def run(protocol):
     ctrl_linker_2 = tube_rack.wells_by_name()["B3"]
     pIDMv5K = tube_rack.wells_by_name()["C3"]
 
-    water = protocol.load_labware("nest_12_reservoir_15ml", 8).wells_by_name()["A1"]
+    water = protocol.load_labware("nest_1_reservoir_195ml", 8).wells_by_name()["A1"]
     agar_plate = protocol.load_labware("biorad_96_wellplate_200ul_pcr", 4)
 
     # Resuspension
